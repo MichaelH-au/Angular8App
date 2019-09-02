@@ -1,13 +1,1 @@
-<div class="topNavBar">
-  <!--<div class="topNavItem"><a href="#">热门</a></div>-->
-  <!--<div class="topNavItem"><a href="#">男装</a></div>-->
-  <!--<div class="topNavItem"><a href="#">手机</a></div>-->
-  <div class="topNavItem" *ngFor="let item of topNav; let i = index">
-    <a href="#"
-       [class.active] = "i === selectedIndex"
-       (click) = "handleSelection(i)"
-    >{{item.title}}</a>
-  </div>
-</div>
-
-<div>test</div>
+<ScrollabltTab></ScrollabltTab>
