@@ -1,0 +1,16 @@
+.topNavBar {
+  display: flex;
+  overflow-x:auto;
+  width:auto;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.topNavItem{
+  text-align: center;
+  width: 300px;
+}
+
+.topNavItem > a {
+  text-decoration: none;
+}
