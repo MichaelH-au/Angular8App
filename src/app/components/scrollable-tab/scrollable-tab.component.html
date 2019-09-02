@@ -2,12 +2,16 @@
   <!--<div class="topNavItem"><a href="#">热门</a></div>-->
   <!--<div class="topNavItem"><a href="#">男装</a></div>-->
   <!--<div class="topNavItem"><a href="#">手机</a></div>-->
-  <div class="topNavItem" *ngFor="let item of topNav; let i = index">
+  <div class="topNavItem" *ngFor="let item of data; let i = index">
     <a href="#"
        [class.active] = "i === selectedIndex"
        (click) = "handleSelection(i)"
     >{{item.title}}</a>
+    <span class="indicator" *ngIf="i === selectedIndex"></span>
   </div>
 </div>
 
-<div>test</div>
+<div *ngIf="selectedIndex === -1; then thenTemplate; else elseTemplate">init</div>
+
+<ng-template #thenTemplate>init</ng-template>
+<ng-template #elseTemplate>else</ng-template>
