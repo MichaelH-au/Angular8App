@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface TopMenu {
+  title: string;
+  link?: string;
+
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +13,61 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pinduoduo';
-  tabs = ["热门", "男装", "手机"]
+  selectedIndex = -1;
+  topNav: TopMenu[] = [
+    {
+      title: "热门",
+      link:''
+    },
+    {
+      title: "男装",
+      link:''
+    },
+    {
+      title: "百货",
+      link:''
+    },
+    {
+      title: "运动",
+      link:''
+    },
+    {
+      title: "手机",
+      link:''
+    },
+    {
+      title: "家纺",
+      link:''
+    },
+    {
+      title: "内衣",
+      link:''
+    },
+    {
+      title: "家装",
+      link:''
+    },
+    {
+      title: "母婴",
+      link:''
+    },
+    {
+      title: "美妆",
+      link:''
+    },
+    {
+      title: "家具",
+      link:''
+    },
+    {
+      title: "食品",
+      link:''
+    },
+    {
+      title: "鞋包",
+      link:''
+    }]
+    handleSelection(i){
+      this.selectedIndex = i
+    }
 }
