@@ -6,6 +6,13 @@
 .container .image-slider {
   display: flex;
   overflow-x: scroll;
+  /*safari chrome 流畅滑动*/
+  -webkit-overflow-scrolling: touch;
+  /*对scroll加过渡动画 safari 不支持*/
+  scroll-behavior: smooth;
+  /*图片滑动一半时的处理*/
+  scroll-snap-type:x mandatory;
+
 }
 
 .nav-section {
@@ -28,4 +35,17 @@
   text-decoration: none;
   border-radius: 50%;
   margin: 5px;
+}
+
+.imageItem{
+  width: 100%;
+  height: 100%;
+  /*自动截取图片像素*/
+  object-fit: cover;
+  /*图片滑动一半时的处理*/
+  scroll-snap-align: start;
+}
+
+.nav-section .slide-button-select{
+  background-color: red;
 }
