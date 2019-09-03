@@ -1,4 +1,9 @@
 <app-scrollable-tab
   [data]="topMenu"
+  [backgroundColor] = "'red'"
+  [activeColor] = "'white'"
+  [normalColor] = "'green'"
+  indicatorColor = "lightGreen"
   (tabSelected) = "handleTabSelected($event)"
-></app-scrollable-tab>
+><div>hello</div></app-scrollable-tab>
+<app-image-slider [sliders]="imageSliders"></app-image-slider>

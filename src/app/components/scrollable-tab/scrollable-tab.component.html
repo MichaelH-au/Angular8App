@@ -1,13 +1,18 @@
-<div class="topNavBar">
+<div class="topNavBar" [ngStyle]="{'background-color': backgroundColor}">
   <!--<div class="topNavItem"><a href="#">热门</a></div>-->
   <!--<div class="topNavItem"><a href="#">男装</a></div>-->
   <!--<div class="topNavItem"><a href="#">手机</a></div>-->
   <div class="topNavItem" *ngFor="let item of data; let i = index">
     <a href="#"
        [class.active] = "i === selectedIndex"
+       [ngStyle]="{'color': i === selectedIndex ? activeColor : normalColor}"
        (click) = "handleSelection(i)"
     >{{item.title}}</a>
-    <span class="indicator" *ngIf="i === selectedIndex"></span>
+    <span
+      class="indicator"
+      *ngIf="i === selectedIndex"
+      [ngStyle]="{'background-color': indicatorColor}"
+    ></span>
   </div>
 </div>
 
@@ -15,3 +20,4 @@
 
 <ng-template #thenTemplate>init</ng-template>
 <ng-template #elseTemplate>else</ng-template>
+<ng-content></ng-content>

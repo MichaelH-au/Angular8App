@@ -2,7 +2,8 @@
   display: flex;
   overflow-x:scroll;
   flex-direction: row;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   /*border: 1px red solid;*/
 }
 
@@ -24,12 +25,11 @@
   text-decoration: none;
   /*cursor: pointer !important;*/
 }
-/*::-webkit-scrollbar{*/
-/*display: block;*/
-/*}*/
+::-webkit-scrollbar{
+display: none;
+}
 
 .indicator{
-  background-color: red;
   height:2px;
   width:2rem;
   margin-top: 2px;
