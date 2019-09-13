@@ -1,0 +1,18 @@
+<input
+  type="text"
+  value="username"
+  [value] = "username"
+  (input)="username = $event.target.value"
+>
+
+<span>hellom {{username}}</span>
+<div (click)="handleClick()">
+{{result}}
+</div>
+
+<!--<input-->
+  <!--type="text"-->
+  <!--[(ngModel)] = "username"-->
+<!--&gt;-->
+
+<!--<span>hellom {{username}}</span>-->

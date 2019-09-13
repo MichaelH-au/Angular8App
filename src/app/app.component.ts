@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {TopMenu} from "./components/scrollable-tab";
-import {ImageSlider} from "./components/image-slider";
+import {TopMenu} from "./shared/components/scrollable-tab";
+import {ImageSlider} from "./shared/components/image-slider";
 
 
 @Component({
@@ -89,4 +89,5 @@ export class AppComponent {
     }
 
   ]
+  username = ''
 }

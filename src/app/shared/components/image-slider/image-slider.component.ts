@@ -33,19 +33,10 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy{
   constructor(private rd2: Renderer2) { }
 
   ngOnInit() {
-    console.log(this.imgSlider)
-    // this.imgSlider.nativeElement.innerHTML = `<span>test</span>`
   }
 
   ngAfterViewInit(): void {
-    console.log(this.img)
-    // this.img.forEach(item => {
-    // this.rd2.setStyle(item.nativeElement, 'height', '100px')
-    // })
     this.intervalId = setInterval(() => {
-      // console.log(++i * this.imgSlider.nativeElement.scrollWith / this.sliders.length)
-      console.log('interval')
-      console.log(this.selectedIndex)
       this.rd2.setProperty(this.imgSlider.nativeElement, 'scrollLeft', this.getIndex(++this.selectedIndex) * this.imgSlider.nativeElement.scrollWidth / this.sliders.length)
     }, this.intervalBySeconds * 1000)
   }
@@ -61,12 +52,9 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy{
 
   handleScroll(e) {
     let ratio = (e.target.scrollLeft * this.sliders.length) / e.target.scrollWidth
-    // console.log(ratio)
     ratio = Math.ceil(ratio)
     if (ratio != this.selectedIndex) {
-      console.log(this.selectedIndex, ratio)
       this.selectedIndex = Math.round(ratio)
-      // console.log(this.selectedIndex + 'handle')
 
     }
   }
