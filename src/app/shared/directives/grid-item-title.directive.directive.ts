@@ -1,10 +1,13 @@
-import {Directive, ElementRef, Renderer2} from '@angular/core';
+import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appGridItemTitle]'
 })
-export class GridItemTitleDirective {
+export class GridItemTitleDirective implements OnInit{
   constructor(private elr: ElementRef, private rd2: Renderer2) {
+  }
+
+  ngOnInit(){
     this.rd2.setStyle(this.elr.nativeElement, 'grid-area', 'title')
   }
 

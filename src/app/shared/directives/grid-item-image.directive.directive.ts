@@ -13,6 +13,6 @@ export class GridItemImageDirective implements OnInit{
     this.rd2.setStyle(this.elr.nativeElement, 'grid-area', 'image')
     this.rd2.setStyle(this.elr.nativeElement, 'width', this.appGridItemImage)
     this.rd2.setStyle(this.elr.nativeElement, 'height', this.appGridItemImage)
-    this.rd2.setStyle(this.elr.nativeElement, 'object-fit', 'cover')
+    this.rd2.setStyle(this.elr.nativeElement, 'object-fit', this.fitMod)
   }
 }
