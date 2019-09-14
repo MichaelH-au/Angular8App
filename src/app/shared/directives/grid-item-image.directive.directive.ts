@@ -1,18 +1,11 @@
-import {Directive, ElementRef, Input, Renderer2, OnInit} from '@angular/core';
+import {Directive, Input, HostBinding} from '@angular/core';
 
 @Directive({
   selector: '[appGridItemImage]'
 })
-export class GridItemImageDirective implements OnInit{
-  @Input() appGridItemImage='2rem';
-  @Input() fitMod='cover';
-  constructor(private elr: ElementRef, private rd2: Renderer2) {
-  }
-
-  ngOnInit() {
-    this.rd2.setStyle(this.elr.nativeElement, 'grid-area', 'image')
-    this.rd2.setStyle(this.elr.nativeElement, 'width', this.appGridItemImage)
-    this.rd2.setStyle(this.elr.nativeElement, 'height', this.appGridItemImage)
-    this.rd2.setStyle(this.elr.nativeElement, 'object-fit', this.fitMod)
-  }
+export class GridItemImageDirective {
+  @HostBinding('style.width') @Input() appGridItemImage='2rem';
+  @HostBinding('style.height') @Input() appGridItemImage='2rem';
+  @HostBinding('style.object-fit') @Input() fitMod='cover';
+  @HostBinding('style.grid-area') area = 'image'
 }
