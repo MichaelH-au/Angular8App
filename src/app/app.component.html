@@ -7,4 +7,9 @@
   (tabSelected) = "handleTabSelected($event)"
 ><div>hello</div></app-scrollable-tab>
 <app-image-slider [sliders]="imageSliders"></app-image-slider>
-<app-horizontal-grid [(username)] = "username"></app-horizontal-grid>
+<app-horizontal-grid [(username)] = "username">
+  <div class="grid-item" appGridItem *ngFor="let item of channels">
+    <img [src]="item.icon" alt="" [appGridItemImage]="'2rem'" [fitMod]="'cover'">
+    <span appGridItemTitle>{{item.title}}</span>
+  </div>
+</app-horizontal-grid>

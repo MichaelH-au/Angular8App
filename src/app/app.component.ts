@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {TopMenu} from "./shared/components/scrollable-tab";
 import {ImageSlider} from "./shared/components/image-slider";
+import {Channel} from "./shared/components/horizontal-grid";
 
 
 @Component({
@@ -87,7 +88,80 @@ export class AppComponent {
       link:"",
       caption:""
     }
-
   ]
-  username = ''
+  username = '';
+  channels: Channel[] = [
+    {
+      id:'1',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'2',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'3',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    }
+  ]
 }
