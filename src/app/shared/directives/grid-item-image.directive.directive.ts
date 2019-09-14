@@ -4,7 +4,8 @@ import {Directive, ElementRef, Input, Renderer2, OnInit} from '@angular/core';
   selector: '[appGridItemImage]'
 })
 export class GridItemImageDirective implements OnInit{
-  @Input() appGridItemImage='2rem'
+  @Input() appGridItemImage='2rem';
+  @Input() fitMod='cover';
   constructor(private elr: ElementRef, private rd2: Renderer2) {
   }
 
