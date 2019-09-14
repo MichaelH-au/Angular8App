@@ -25,6 +25,7 @@ export function Emoji() {
 
 export function Confirmable(message: string) {
   return (target: object, key: string, descriptor: PropertyDescriptor) => {
+    console.log(descriptor)
      const original = descriptor.value;
      descriptor.value = function (...args: any) {
        const allow = window.confirm(message)
