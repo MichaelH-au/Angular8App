@@ -1,13 +1,48 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Confirmable, Emoji} from "../../decorators";
 
+export interface Channel {
+  id: string;
+  icon: string;
+  title: string;
+  link: string;
+}
+
 @Component({
   selector: 'app-horizontal-grid',
   templateUrl: './horizontal-grid.component.html',
   styleUrls: ['./horizontal-grid.component.css']
 })
 export class HorizontalGridComponent implements OnInit {
-  // username = ''
+
+  channels: Channel[] = [
+    {
+      id:'1',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'2',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'3',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    },
+    {
+      id:'4',
+      title: '限时秒杀',
+      icon:'http://www.laawoo.com/images/default/activity/6010/big.jpg',
+      link:''
+    }
+  ]
+
+
   private _username = ''
   @Output() usernameChange = new EventEmitter()
   @Emoji() result = 'Hello'
